@@ -12,7 +12,7 @@
     <!--font awesome-->
     <script src="https://kit.fontawesome.com/0e08ef1fea.js" crossorigin="anonymous"></script>
 
-    <script src="src/main.js" defer></script>
+    <script type="module" src="src/main.js" defer></script>
     <title>Tudo Seco</title>
 
 
@@ -23,61 +23,119 @@
         
               
                     
-                        <header>
-                            <div class="header-content container">
-                            <h1>Tudo Seco</h1>
-                                <button  id="toggle-menu">
-                                    <i class="fa-solid fa-bars "></i>
-                                    <i class="fa-solid fa-x is-active"></i>
-                                </button>
-                                <nav class="mobile-nav ">
-                                        <a href="/">Home</a>
-                                        <a href="">Sobre</a>
-                                        <a href="">Serviços</a>
-                                        <a href="">Contato</a>
-                                </nav>
-                                <nav class="desktop-nav">
-                                        <a href="/">Home</a>
-                                        <a href="">Sobre</a>
-                                        <a href="">Serviços</a>
-                                        <a href="">Contato</a>
-                        
-                            </div>
-                            </header>
+  	 <header>
+        <div class="header-content container">
+           <h1>Tudo Seco</h1>
+					 <button id="toggle-menu">
+             <i class="fa-solid fa-bars "></i>
+           <i class="fa-solid fa-x is-active"></i>
+           </button>
+            <nav class="mobile-nav ">
+                <a href="/">Home</a>
+                  <a href="">Sobre</a>
+                    <a href="">Serviços</a>
+                      <a href="">Contato</a>
+                       </nav>
+                      <nav class="desktop-nav">
+                      <a href="/">Home</a>
+                       <a href="">Sobre</a>
+                       <a href="">Serviços</a>
+                      <a href="">Contato</a>
+               </div>
+            </header>
                    
-                        <main>
-                            <div class="bg-home">
-                                <section class="hero-content  container">
-                                    <h1>Tudo seco</h1>
-                                    <h2>Impermeabilização e revestimento</h2>
-                                    <p>Referência a mais de 20 anos quando o asunto é proteger a sua casa contra infiltrações e vazamentos</p>
-                                    <button class="btn-hero">Faça um orçamento gratuito</button>
-                                </section>
-                            </div>
+   <main>
+       <div class="bg-home">
+          <section class="hero-content  container">
+            <h1>Tudo seco</h1>
+             <h2>Impermeabilização e revestimento</h2>
+                <p>Referência a mais de 20 anos quando o asunto é proteger a sua casa contra infiltrações e vazamentos</p>
+                 <button class="btn-hero">Faça um orçamento gratuito</button>
+           </section>
+      </div>
 
 
-                            <section class="about">
-                                <div class="about-content container">
-                                    <h1> a tudo seco</h1>
-                                    <p>
-                                        A<strong> Tudo Seco</strong> é uma empresa especializada em serviços de revestimentos e impermeabilizações técnicas para a construção civil com mais de vinte anos de atividade. Temos como principal produto a manta asfaltica para aterros e lajes abertas. Ao decorrer dos anos a <strong>Tudo Seco </strong>alcançou uma forte imagem de credibilidade e qualidade, mantendo-se uma empresa respeitada ao longo de sua existência, resultado de muito trabalho e de uma postura de honestidade e compromisso com seus clientes e fornecedores.</p>
-                                        <p>
-                                        Atendemos clientes pessoas físicas e jurídicas de pequeno, médio e grande porte. Venha conhecer nossos produtos, nossos serviços e garanta a qualidade e excelência da sua obra de vedação. agende um orçamento gratuito, será um prazer te atender!
-                                    </p>
-                                    <button class="btn-about">Entrar em contato</button>
-                                </div>
+    <section class="about">
+       <div class="about-content container">
+         <h1> a tudo seco</h1>
+          <p>
+						A<strong> Tudo Seco</strong> é uma empresa especializada em serviços de revestimentos e impermeabilizações técnicas para a construção civil com mais de vinte anos de atividade. Temos como principal produto a manta asfaltica para aterros e lajes abertas. Ao decorrer dos anos a <strong>Tudo Seco </strong>alcançou uma forte imagem de credibilidade e qualidade, mantendo-se uma empresa respeitada ao longo de sua existência, resultado de muito trabalho e de uma postura de honestidade e compromisso com seus clientes e fornecedores.</p>
+            	 <p>
+                	Atendemos clientes pessoas físicas e jurídicas de pequeno, médio e grande porte. Venha conhecer nossos produtos, nossos serviços e garanta a qualidade e excelência da sua obra de vedação. agende um orçamento gratuito, será um prazer te atender!
+              	 </p>
+                  	<button class="btn-about">Entrar em contato</button>
+           	 </div>
 
-                            </section>
+    	 </section>
 
-                            <section class="services">
-                                <div class="services-content container">
-                                    <h1>serviços</h1>
+  	 <section class="services">
+        
+		<div class="services-content container">
+         <h1>serviços</h1>
+
+       <!--Slider--> 
+        <div class="slider">
+
+					<div class="slides">
+						<!--radio-buttons-->
+						<input type="radio" name="radio-btn" id="radio1">
+						<input type="radio" name="radio-btn" id="radio2">
+						<input type="radio" name="radio-btn" id="radio3">
+						<input type="radio" name="radio-btn" id="radio4">
+						<!--end radio button-->
+
+						<!--slide images-->
+
+						<div class="slide first">
+							<div class="service-description">
+								<h1>manta asfaltica</h1>
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia veniam numquam corrupti non est exercitationem eum dolor neque dolores aspernatur, repellat accusantium corporis, incidunt at aut quas voluptates natus aliquam!</p>
+							</div>
+							
+							
+						</div>
+
+						<div class="slide ">
+							<img src="assets/serv-2.jpg" alt="imagem 2">
+						</div>
+
+						<div class="slide">
+							<img src="assets/serv-3.jpg" alt="imagem 3">
+						</div>
+
+						<div class="slide">
+							<img src="assets/serv-4.webp" alt="imagem 4">
+						</div>
+
+						<!--end images-->
+
+						<!--navigation auto-->
+
+						<div class="navigation-auto">
+								<div class="auto-btn1"></div>
+								<div class="auto-btn2"></div>
+								<div class="auto-btn3"></div>
+								<div class="auto-btn4"></div>
+
+						</div>
+
+    			</div>
+					<!--label-->
+
+					<div class="manual-navigation">
+							<label for="radio1" class="manual-btn"></label>
+							<label for="radio2" class="manual-btn"></label>
+							<label for="radio3" class="manual-btn"></label>
+							<label for="radio4" class="manual-btn"></label>
+					</div>
 
 
 
-                                </div>
-                            </section>
-                        </main>
+   </div>
+
+   </div>
+   </section>
+</main>
                             
                     
                        
