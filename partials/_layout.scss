@@ -31,7 +31,7 @@
 }
 
 main{
-
+    
 
     .hero-content{
         height: 84vh;
@@ -85,8 +85,7 @@ main{
         background-color: $white;
         padding: 6.4rem 1.2rem 3.2rem;
         
-     
-        >h1{
+        > h1{
             text-transform: uppercase;
             font-size: 2.4rem;
             
@@ -95,12 +94,13 @@ main{
             margin-bottom: 3.2rem;
 
             border-bottom: 2px solid $red-500;
-
         }
+       
         >p{
             font-size: 1.4rem;
-            line-height: 1.4;
+            line-height: 1.6;
             text-align: justify;
+          
 
         }
         p + p{
@@ -128,9 +128,8 @@ main{
 
     .services{
 
-
         .services-content{
-            padding: 6.4rem 1.2rem 3.2rem;
+            padding: 6.4rem 1.2rem;
             > h1{
                 text-transform: uppercase;
                 font-size: 2.4rem;
@@ -143,4 +142,78 @@ main{
             }
         }
     }
+
+
+    .contact{
+        background-color: $white;
+        padding: 6.4rem 0;
+       
+
+           
+        .contact-content{
+
+            >h1{
+                text-transform: uppercase;
+                font-size: 2.4rem;
+                
+                display: inline-block;
+                padding-bottom: 1.2rem;
+                margin-bottom: 3.2rem;
+    
+                border-bottom: 2px solid $red-500;
+            }
+
+            .contact-informations-wrap{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 3.2rem;
+
+                >.contact-informations{
+
+                    >h2{
+                        font-size: 1.6rem;
+                        margin-bottom: 2.6rem;
+
+                    }
+
+                    > h3{
+                        font-size: 1.4rem;
+                        
+                    }
+
+                    >p{
+                        font-size: 1.4rem;
+                        margin-top: 1.2rem;
+                    }
+                    
+                  
+                        
+                
+                }
+
+                > .map{
+                    iframe{
+                        width: 100%;
+                        height: 300px;
+
+                    }
+                }
+
+
+            }
+               
+
+        }
+        
+    }
+}
+
+
+footer{
+    width: 100%;
+    font-size: 1rem;
+    padding: 2.4rem 1.2rem;
+   text-align: center;
+   
 }

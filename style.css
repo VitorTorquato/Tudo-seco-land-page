@@ -151,7 +151,7 @@ main .about .about-content.container > h1 {
 }
 main .about .about-content.container > p {
   font-size: 1.4rem;
-  line-height: 1.4;
+  line-height: 1.6;
   text-align: justify;
 }
 main .about .about-content.container p + p {
@@ -169,7 +169,7 @@ main .about .about-content.container > .btn-about:hover {
   filter: brightness(1.1);
 }
 main .services .services-content {
-  padding: 6.4rem 1.2rem 3.2rem;
+  padding: 6.4rem 1.2rem;
 }
 main .services .services-content > h1 {
   text-transform: uppercase;
@@ -179,12 +179,54 @@ main .services .services-content > h1 {
   margin-bottom: 3.2rem;
   border-bottom: 2px solid #ef4444;
 }
+main .contact {
+  background-color: white;
+  padding: 6.4rem 0;
+}
+main .contact .contact-content > h1 {
+  text-transform: uppercase;
+  font-size: 2.4rem;
+  display: inline-block;
+  padding-bottom: 1.2rem;
+  margin-bottom: 3.2rem;
+  border-bottom: 2px solid #ef4444;
+}
+main .contact .contact-content .contact-informations-wrap {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+main .contact .contact-content .contact-informations-wrap > .contact-informations > h2 {
+  font-size: 1.6rem;
+  margin-bottom: 2.6rem;
+}
+main .contact .contact-content .contact-informations-wrap > .contact-informations > h3 {
+  font-size: 1.4rem;
+}
+main .contact .contact-content .contact-informations-wrap > .contact-informations > p {
+  font-size: 1.4rem;
+  margin-top: 1.2rem;
+}
+main .contact .contact-content .contact-informations-wrap > .map iframe {
+  width: 100%;
+  height: 300px;
+}
+
+footer {
+  width: 100%;
+  font-size: 1rem;
+  padding: 2.4rem 1.2rem;
+  text-align: center;
+}
 
 .slider {
   margin: 0 auto;
-  width: 800px;
-  height: 400px;
+  width: 270px;
+  height: 300px;
   overflow: hidden;
+  box-shadow: 16px 22px 18px -20px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
 }
 
 .slides {
@@ -201,13 +243,14 @@ main .services .services-content > h1 {
   width: 25%;
   position: relative;
   transition: 0.2s;
+  padding: 1.6rem;
 }
 
-.slide.first {
+.slide.first.slide-img {
   position: relative;
 }
 
-.slide.first::before {
+.slide-img::before {
   content: "";
   display: block;
   position: absolute;
@@ -222,27 +265,68 @@ main .services .services-content > h1 {
   z-index: -1;
 }
 
-.service-description {
+.slide-img2::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("../assets/serv-2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
   height: 100%;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.slide-img3::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("../assets/serv-3.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.service-description {
+  width: 24rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   color: white;
   position: absolute;
-  padding: 1.6rem;
+  padding: 1rem;
+  gap: 1rem;
+  border: 1px solid white;
+  border-radius: 10px;
+}
+.service-description > h1 {
+  font-size: 2.4rem;
+  color: black;
+  text-align: center;
+}
+.service-description > p {
+  font-size: 1.4rem;
+  color: black;
+  text-align: center;
 }
 
 .slide img {
-  width: 800px;
+  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
 .manual-navigation {
   position: absolute;
-  width: 800px;
-  margin-top: -40px;
+  width: 250px;
+  margin-top: -120px;
   display: flex;
   justify-content: center;
 }
@@ -274,10 +358,6 @@ main .services .services-content > h1 {
   margin-left: -50%;
 }
 
-#radio4:checked ~ .first {
-  margin-left: -75%;
-}
-
 .navigation-auto div {
   border: 2px solid #1d4ed8;
   padding: 5px;
@@ -288,8 +368,8 @@ main .services .services-content > h1 {
 
 .navigation-auto {
   position: absolute;
-  width: 800px;
-  margin-top: 360px;
+  width: 250px;
+  margin-top: 280px;
   display: flex;
   justify-content: center;
 }
