@@ -12,6 +12,7 @@
 header {
   width: 100%;
   padding: 2.4rem 0;
+  background-color: #f1f5f9;
 }
 
 .header-content {
@@ -21,11 +22,11 @@ header {
   justify-content: space-between;
 }
 .header-content > h1 {
-  color: white;
+  color: #1e293b;
 }
 .header-content i {
-  color: white;
-  font-size: 3.5rem;
+  color: #1e293b;
+  font-size: 3rem;
 }
 .header-content #toggle-menu {
   position: absolute;
@@ -40,13 +41,13 @@ header {
   display: none;
 }
 .header-content .mobile-nav.is-active {
-  width: 80%;
-  height: 100vh;
+  width: 70%;
+  height: 60vh;
   position: fixed;
-  top: 0;
+  top: 13px;
   right: 0;
   z-index: 99;
-  background-color: orange;
+  background-color: #64748b;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -79,66 +80,64 @@ header {
   padding: 0 1.2rem;
 }
 
-.bg-home {
+main .bg-home {
   position: relative;
 }
-
-.bg-home::before {
+main .bg-home::before {
   content: "";
   display: block;
   position: absolute;
   top: 0;
   left: 0;
-  background-image: url("../assets/hero-img.jpeg");
+  background-image: url("../assets/serv-2.jpg");
   background-repeat: no-repeat;
+  background-position: center center;
   background-size: cover;
   background-attachment: fixed;
   width: 100%;
   height: 100%;
   z-index: -1;
-  opacity: 0.6;
+  opacity: 0.2;
 }
-
-main .hero-content {
+main .hero .hero-content {
   height: 84vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-main .hero-content > h1 {
+main .hero .hero-content > h1 {
   font-size: 4rem;
-  color: white;
+  color: black;
   text-transform: uppercase;
   margin-bottom: 1.6rem;
+  padding-bottom: 1.2rem;
+  border-bottom: 6px solid #1E4F87;
 }
-main .hero-content > h2 {
+main .hero .hero-content > h2 {
   font: 2.2rem;
   text-align: center;
-  color: white;
+  color: black;
   margin-bottom: 3.2rem;
 }
-main .hero-content > p {
+main .hero .hero-content > p {
   font-size: 1.4rem;
-  color: white;
-  text-align: justify;
+  font-weight: 500;
+  color: black;
+  text-align: center;
   line-height: 1.4;
   margin-bottom: 3.2rem;
 }
-main .hero-content > .btn-hero {
-  background-color: #ef4444;
-  padding: 1.2rem;
-  border-radius: 6px;
+main .hero .hero-content > .btn-hero {
+  border-bottom: 2px solid #D93D40;
+  padding: 0.5rem;
+  cursor: pointer;
   transition: 0.3s ease-in-out;
 }
-main .hero-content > .btn-hero:hover {
-  filter: brightness(1.1);
-}
 main .about {
-  background-color: white;
+  background-color: #f1f5f9;
 }
 main .about .about-content.container {
-  background-color: white;
   padding: 6.4rem 1.2rem 3.2rem;
 }
 main .about .about-content.container > h1 {
@@ -157,16 +156,12 @@ main .about .about-content.container > p {
 main .about .about-content.container p + p {
   margin-top: 3.2rem;
 }
-main .about .about-content.container > .btn-about {
-  display: block;
-  margin: 3.2rem auto 3.2rem;
-  background-color: #ef4444;
-  padding: 1.2rem;
-  border-radius: 6px;
+main .about .about-content.container .btn-about {
+  border-bottom: 2px solid #D93D40;
+  padding: 0.5rem;
+  cursor: pointer;
   transition: 0.3s ease-in-out;
-}
-main .about .about-content.container > .btn-about:hover {
-  filter: brightness(1.1);
+  margin-top: 3.2rem;
 }
 main .services .services-content {
   padding: 6.4rem 1.2rem;
@@ -180,7 +175,7 @@ main .services .services-content > h1 {
   border-bottom: 2px solid #ef4444;
 }
 main .contact {
-  background-color: white;
+  background-color: #f1f5f9;
   padding: 6.4rem 0;
 }
 main .contact .contact-content > h1 {
@@ -214,8 +209,10 @@ main .contact .contact-content .contact-informations-wrap > .map iframe {
 }
 
 footer {
+  background-color: #1e293b;
   width: 100%;
   font-size: 1rem;
+  color: white;
   padding: 2.4rem 1.2rem;
   text-align: center;
 }
@@ -299,28 +296,28 @@ footer {
   width: 24rem;
   display: flex;
   flex-direction: column;
-  color: white;
+  color: #1e293b;
   position: absolute;
   padding: 1rem;
   gap: 1rem;
-  border: 1px solid white;
+  border-top: 1px solid rgba(153, 153, 153, 0.5);
+  border-right: 1px solid rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  border-left: 1px solid rgba(153, 153, 153, 0.5);
   border-radius: 10px;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
 }
 .service-description > h1 {
   font-size: 2.4rem;
-  color: black;
+  color: #1e293b;
+  font-weight: bold;
   text-align: center;
 }
 .service-description > p {
   font-size: 1.4rem;
-  color: black;
+  color: #1e293b;
   text-align: center;
-}
-
-.slide img {
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
 .manual-navigation {
@@ -359,7 +356,7 @@ footer {
 }
 
 .navigation-auto div {
-  border: 2px solid #1d4ed8;
+  border: 2px solid #1E4F87;
   padding: 5px;
   border-radius: 10px;
   cursor: pointer;
@@ -387,13 +384,13 @@ footer {
 
 body {
   font-size: 1.6rem;
-  font-family: "Sora", sans-serif;
+  font-family: "Roboto", sans-serif;
   position: relative;
-  background-color: #1d4ed8;
+  background-color: #e2e8f0;
 }
 
 button {
   border: none;
   background: none;
-  font-family: "Sora", sans-serif;
+  font-family: "Roboto", sans-serif;
 }/*# sourceMappingURL=style.css.map */
