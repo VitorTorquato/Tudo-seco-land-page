@@ -2,6 +2,8 @@ header{
     width: 100%;
     padding: 2.4rem 0;
     background-color: $slate_100;
+    position:fixed;
+    z-index: 99;
     
 }
 
@@ -14,6 +16,7 @@ header{
    
     > h1{
         color: $slate_800;
+       
     }
 
 
@@ -28,6 +31,13 @@ header{
         position:absolute;
         right: 22px;
         z-index: 100;
+
+        @media (min-width :768px)  {
+        
+                display: none;
+            
+
+        }
 
     }
     .fa-bars.is-active,
@@ -89,6 +99,35 @@ header{
 
       .desktop-nav{
         display: none;
+        
+
+        @media (min-width:768px){
+            display: flex;
+            gap: 1.6rem;
+
+            >  a{
+                text-decoration: none;
+                color: $slate_800;
+                font-size: 2rem;
+               
+                
+            &:after{
+               content: "";
+               display: block;
+               width:0 ;
+               height: 1px;
+               background-color: $slate_800;
+               transition: width 0.15s ease-in-out;
+
+              
+
+            }
+
+            &:hover::after{
+                width: 100%;
+            }
+        }
+        
       }  
     
 
@@ -96,4 +135,5 @@ header{
    
         
    
+}
 }
