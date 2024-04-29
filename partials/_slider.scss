@@ -1,7 +1,8 @@
 .slider{
     margin: 0 auto;
     width: 100%;
-    height: 300px;
+    max-width: 500px;
+
     overflow: hidden;
     box-shadow:  16px 22px 18px -20px rgba(0,0,0,0.6);
     border-radius: 10px;
@@ -27,87 +28,93 @@
     width: 25%;
     position: relative;
     transition: .2s ;
-    
-  
-   
-    padding: 1.6rem;
-   
-}
 
-
-.slide.first.slide-img{
-   position: relative;
-
-}
-
-.slide-img::before{
-    content: "";
-    display: block;
-    position:absolute;
-    top: 0;
-    left: 0;
-    background-image: url("../assets/serv-1.jpg");
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 100%;
-    opacity: 0.5;
-
-    
-
-    z-index: -1;
-}
-
-
-.slide-img2::before{
-    content: "";
-    display: block;
-    position:absolute;
-    top: 0;
-    left: 0;
-    background-image: url("../assets/serv-2.jpg");
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 100%;
-    opacity: 0.5;
-
-    
-    z-index: -1;
-}
-.slide-img3::before{
-    content: "";
-    display: block;
-    position:absolute;
-    top: 0;
-    left: 0;
-    background-image: url("../assets/serv-3.jpg");
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 100%;
-    opacity: 0.5;
-
-    z-index: -1;
-}
-
-
-
-
-
-.service-description{
-    
-    width: 24rem;  
     display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.2rem;
+
+
     
+}
+
+
+
+
+
+								
+.slide{
+    position: relative;
+ 
+ }
+ 
+ .slide-img1::before{
+     content: "";
+     display: block;
+     position:absolute;
+     top: 0;
+     left: 0;
+     background-image: url("../assets/serv-1.jpg");
+     background-size: cover;
+     background-position: center center;
+     background-repeat: no-repeat;
+     width: 100%;
+     height: 100%;
+     opacity: 0.6;
+ 
+ 
+     
+ 
+     z-index: -1;
+ }
+ 
+ 
+ .slide-img2::before{
+     content: "";
+     display: block;
+     position:absolute;
+     top: 0;
+     left: 0;
+     background-image: url("../assets/serv-2.jpg");
+     background-size: cover;
+     background-position: center center;
+     background-repeat: no-repeat;
+     width: 100%;
+     height: 100%;
+     opacity: 0.6;
+
+ 
+     
+     z-index: -1;
+ }
+ .slide-img3::before{
+     content: "";
+     display: block;
+     position:absolute;
+     top: 0;
+     left: 0;
+     background-image: url("../assets/serv-3.jpg");
+     background-size: cover;
+     background-position: center center;
+     background-repeat: no-repeat;
+     width: 100%;
+     height: 100%;
+     opacity: 0.6;
+
+ 
+     z-index: -1;
+ }
+
+ .service-description{
+    display: flex;
     flex-direction: column;
-    color: $slate_800;
-    position: absolute;
-    padding: 1rem;
-    gap: 1rem;
+
+    align-items: center;
+    
+
+    margin: 0 auto;
+    padding: 2rem 1.6rem;
+
 
     border-top: 1px solid rgba(153,153,153,0.5);
     border-right: 1px solid rgba(0,0,0,0.5);
@@ -115,43 +122,38 @@
     border-left: 1px solid rgba(153,153,153,0.5);
     border-radius: 10px;
 
-    backdrop-filter: blur(10px);
-   
+    backdrop-filter: blur(8px);
+    text-align: center;
 
-    > h1{
-        font-size: 2.4rem;
-        color: $slate_800;
-        font-weight: bold;
-        text-align: center;
-        padding-bottom: 0.6rem;
-        border-bottom: 2px solid $red_500;
-    }
-
-    > p{
-        font-size: 1.4rem;
-        color: $slate_800;
-        font-weight: 700;
-        text-align: center;
-    }
+    >h1{
     
+        margin-bottom: 1.6rem;
+        padding-bottom: .8rem;
+        border-bottom: 4px solid $blue_600 ;
+    }
 
+    >p{
+        font-size: 1.4rem;
+        font-weight: 500;
+    };
+ }
+ 
 
-}
+ //navigation buttons
 
-
-
-
-
-
-
-// end slides 
-
-.manual-navigation{
+ .manual-navigation{
     position: absolute;
-    width: 250px;
-    margin-top: -120px;
+    width: 90%;
+
+    margin-top: -40px;
     display: flex;
     justify-content: center;
+
+    @media(min-width: 768px){
+        width: 50%;
+    right: 15px;
+    }
+   
 }
 
 .manual-btn{
@@ -194,10 +196,18 @@
 
 .navigation-auto{
     position: absolute;
-    width: 250px;
-    margin-top: 280px;
+    
+    width: 90%;
+   
+    margin-top: 360px;
     display: flex;
     justify-content: center;
+
+    @media(min-width: 768px){
+        width: 50%;
+    right: 15px;
+    }
+
 }
 
 .navigation-auto div:not(:last-child){
@@ -210,5 +220,11 @@
 #radio4:checked ~ .navigation-auto  .auto-btn4{
     background-color: white;
 }
+
+
+
+
+
+
 
 

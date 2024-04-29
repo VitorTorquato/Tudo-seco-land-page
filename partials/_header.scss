@@ -14,8 +14,10 @@ header{
     align-items: center;
     justify-content: space-between;
    
-    > h1{
-        color: $slate_800;
+    >.logo{
+        >a img{
+           width: 6.4rem;
+        }
        
     }
 
@@ -62,9 +64,12 @@ header{
             align-items: center;
             justify-content: space-evenly;
             text-transform: uppercase;
-            
-        
+            transition: 5s;
 
+            
+
+        
+            
             
             >  a{
                 text-decoration: none;
