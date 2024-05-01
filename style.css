@@ -15,6 +15,7 @@ header {
   background-color: #f1f5f9;
   position: fixed;
   z-index: 99;
+  box-shadow: 1px 14px 52px -21px rgba(0, 0, 0, 0.75);
 }
 
 .header-content {
@@ -283,6 +284,38 @@ main .about .about-content.container .btn-about {
   cursor: pointer;
   transition: 0.3s ease-in-out;
   margin-top: 3.2rem;
+}
+main .questions .questions-content.container {
+  padding: 6.4rem 1.2rem;
+}
+main .questions .questions-content.container > h1 {
+  text-transform: uppercase;
+  font-size: 2.4rem;
+  display: inline-block;
+  padding-bottom: 0.6rem;
+  margin-bottom: 3.2rem;
+  border-bottom: 2px solid #ef4444;
+}
+@media (min-width: 768px) {
+  main .questions .questions-content.container > h1 {
+    font-size: 3.2rem;
+  }
+}
+main .questions .questions-content.container .questions-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+main .questions .questions-content.container .questions-wrap > p {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  text-align: justify;
+  margin-bottom: 3.2rem;
+}
+@media (min-width: 768px) {
+  main .questions .questions-content.container .questions-wrap > p {
+    font-size: 2rem;
+  }
 }
 main .services .services-content {
   padding: 6.4rem 1.2rem;
@@ -621,6 +654,43 @@ footer {
 #radio3:checked ~ .navigation-auto .auto-btn3,
 #radio4:checked ~ .navigation-auto .auto-btn4 {
   background-color: white;
+}
+
+.question-card {
+  background-color: #f1f5f9;
+  border-radius: 5px;
+  padding: 1rem;
+}
+.question-card button {
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-align: left;
+  cursor: pointer;
+}
+.question-card button > i {
+  background-color: #1E4F87;
+  padding: 0.6rem;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  color: white;
+  margin-left: 1rem;
+}
+.question-card .answer1,
+.question-card .answer2,
+.question-card .answer3 {
+  display: none;
+}
+.question-card .answer1,
+.question-card .answer2,
+.question-card .answer3 {
+  font-size: 1.4rem;
+  text-align: left;
+  margin-top: 0.5rem;
+}
+.question-card .answer1.show,
+.question-card .answer2.show,
+.question-card .answer3.show {
+  display: block;
 }
 
 body {

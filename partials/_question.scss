@@ -1,0 +1,43 @@
+.question-card{
+    background-color: $slate_100;
+
+    border-radius: 5px;
+    padding: 1rem;
+   
+
+    button{
+        font-size: 1.4rem;
+        font-weight: bold;
+        text-align: left;
+
+        cursor: pointer;
+        >i{
+            background-color: $blue_600;
+            padding: .6rem;
+            border-radius: 50%;
+            font-size: 1.2rem;
+            color: $white;
+            margin-left: 1rem;
+        }
+    }
+    .answer1,
+    .answer2,
+    .answer3{
+        display: none;
+    }
+    
+    .answer1,
+    .answer2,
+    .answer3{
+        font-size: 1.4rem;
+        text-align: left;
+        margin-top: .5rem;
+        
+    }
+
+    .answer1.show,
+    .answer2.show,
+    .answer3.show{
+        display: block;
+    }
+}
