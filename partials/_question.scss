@@ -4,7 +4,26 @@
     border-radius: 5px;
     padding: 1rem;
    
+    >.question{
+        display: flex;
+        gap: 1rem;
 
+        
+
+    }
+    .fa-plus.show,
+    .fa-minus.show,
+    .card2-plus.show,
+    .card2-minus.show,
+    .card3-plus.show,
+    .card3-minus.show
+     {
+        display: none;
+      
+    }
+
+    
+    
     button{
         font-size: 1.4rem;
         font-weight: bold;
@@ -12,12 +31,11 @@
 
         cursor: pointer;
         >i{
-            background-color: $blue_600;
-            padding: .6rem;
-            border-radius: 50%;
+          
+           
             font-size: 1.2rem;
-            color: $white;
-            margin-left: 1rem;
+            color: $blue_600;
+            
         }
     }
     .answer1,

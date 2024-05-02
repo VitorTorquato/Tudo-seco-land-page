@@ -661,6 +661,18 @@ footer {
   border-radius: 5px;
   padding: 1rem;
 }
+.question-card > .question {
+  display: flex;
+  gap: 1rem;
+}
+.question-card .fa-plus.show,
+.question-card .fa-minus.show,
+.question-card .card2-plus.show,
+.question-card .card2-minus.show,
+.question-card .card3-plus.show,
+.question-card .card3-minus.show {
+  display: none;
+}
 .question-card button {
   font-size: 1.4rem;
   font-weight: bold;
@@ -668,12 +680,8 @@ footer {
   cursor: pointer;
 }
 .question-card button > i {
-  background-color: #1E4F87;
-  padding: 0.6rem;
-  border-radius: 50%;
   font-size: 1.2rem;
-  color: white;
-  margin-left: 1rem;
+  color: #1E4F87;
 }
 .question-card .answer1,
 .question-card .answer2,

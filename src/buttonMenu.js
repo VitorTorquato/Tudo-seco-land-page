@@ -26,18 +26,3 @@ btn.addEventListener('click' , (e) => {
 });
 
 
-//question buttons
-
-const btnAnswer1 = document.getElementById("question1");
-const btnAnswer2 = document.getElementById("question2");
-const btnAnswer3 = document.getElementById("question3");
-
-btnAnswer1.addEventListener('click' , () => {
-       document.querySelector('.answer1').classList.toggle('show');
-})
-btnAnswer2.addEventListener('click' , () => {
-       document.querySelector('.answer2').classList.toggle('show');
-})
-btnAnswer3.addEventListener('click' , () => {
-       document.querySelector('.answer3').classList.toggle('show');
-})
