@@ -25,7 +25,7 @@
     border-radius: 4px;
     transition: all 0.2s ease-in;
     position: relative;
-
+    text-decoration: none;
     overflow: hidden;
     font-size: 1.6rem;
     cursor: pointer;
@@ -40,7 +40,7 @@
         margin-top: -50px;
     }
     @media(min-width: 1024px){
-        margin-top: -140px;
+        margin-top: -90px;
     }
   }
   
@@ -444,6 +444,12 @@ main{
                     >p{
                         font-size: 1.4rem;
                         margin-top: 1.2rem;
+
+                        >a{
+                            text-decoration: none;
+                            cursor: pointer;
+                            color: black;
+                        }
                         @media(min-width: 768px){
                             font-size: 1.6rem;
                         }
@@ -478,38 +484,38 @@ main{
 footer{
     background-color: $slate_800;
     width: 100%;
-    font-size: 1rem;
-    color: $white;
-    padding: 2.4rem 1.2rem;
-   text-align: center;
+    padding: 2.4rem 0;
+
+    >.footer-content{
+        display: flex;
+        flex-direction: column;
+        gap: 1.6rem;
+        justify-content: space-between;
+        align-items: center;
+
+        @media(min-width:768px){
+            flex-direction: row;
+        }
+
+
+        >p{
+            font-size: 1.4rem;
+            color: $white;
+        }
+
+        >span{
+            color: $red-500;
+
+
+            >a{
+                text-decoration: none;
+                color: $white;
+                cursor: pointer;
+            }
+        }
+    }
+   
    
 }
-//button to whatssapp
-.btn-whatsapp{
-    text-decoration: none;
-    color: $slate_800;
-    
-    font-size: 1.4rem;
-    font-weight: 400;
-    position:fixed;
-    z-index: 99;
-    bottom: 20px;
-    right: 20px;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
 
-    >img{
-    width: 6.4rem;    
-    transition: transform 0.4s;
-    }
-
-    img:hover{
-        transform: scale(1.1);
-    }
-
-                          
-    
-    
-}
 

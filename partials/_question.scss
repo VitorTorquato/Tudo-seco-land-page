@@ -62,10 +62,15 @@
     .answer3 ,
     .answer4 
     {
+        display: block;
         font-size: 1.4rem;
         text-align: left;
         margin-top: .5rem;
-      
+        margin-top: 1.6rem;
+        max-height: 0;
+        overflow: hidden;
+        
+        transition: max-height 1s ease ;
         
     }
 
@@ -74,28 +79,30 @@
     .answer3.show,
     .answer4.show
     {
-        display: block;
-        margin-top: 1.6rem;
-        animation:scale-up-ver-top .5s ease ;
+        max-height: 80px;
+        
+        
+
+        //animation:scale-up-ver-top .5s ease ;
       
         
     }
 
-    @keyframes scale-up-ver-top {
-        0% {
-          -webkit-transform: scaleY(0.4);
-                  transform: scaleY(0.4);
-          -webkit-transform-origin: 100% 0%;
-                  transform-origin: 100% 0%;
-        }
-        100% {
-          -webkit-transform: scaleY(1);
-                  transform: scaleY(1);
-          -webkit-transform-origin: 100% 0%;
-                  transform-origin: 100% 0%;
-        }
-      }
-      
-
-  
+    
+    
+    
 }
+@keyframes scale-up-ver-top {
+    0% {
+      -webkit-transform: scaleY(0.4);
+              transform: scaleY(0.4);
+      -webkit-transform-origin: 100% 0%;
+              transform-origin: 100% 0%;
+    }
+    100% {
+      -webkit-transform: scaleY(1);
+              transform: scaleY(1);
+      -webkit-transform-origin: 100% 0%;
+              transform-origin: 100% 0%;
+    }
+  }

@@ -77,12 +77,12 @@ header{
             display: none;
         }
 
-         .mobile-nav.is-active {         
+         .mobile-nav{         
             width: 60%;
             height: 60vh;
             position: fixed;
-            top: 13px;
-            right: 0;
+            top: 130px;
+            right: -100%;
             z-index: 99;
             background-color: $blue_600;    
             display: flex;
@@ -90,7 +90,7 @@ header{
             align-items: center;
             justify-content: space-evenly;
             text-transform: uppercase;
-            transition: 5s;
+            transition: right  1.5s ease;
 
             
 
@@ -128,6 +128,10 @@ header{
             
             
         }   
+
+        .mobile-nav.is-active{
+            right: 0;
+        }
 
        
      
