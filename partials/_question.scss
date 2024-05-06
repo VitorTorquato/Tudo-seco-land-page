@@ -1,13 +1,22 @@
 .question-card{
-    background-color: $slate_100;
+    background-color: $slate_200;
 
+    max-width: 600px;
     border-radius: 5px;
     padding: 1rem;
+    box-shadow:  16px 22px 18px -20px rgba(0, 0, 0, 0.331);
    
+    
     >.question{
         display: flex;
+        justify-content: space-between;
         gap: 1rem;
 
+       
+        >p{
+            font-size: 1.6rem;
+            font-weight: bold;
+        }
         
 
     }
@@ -16,7 +25,9 @@
     .card2-plus.show,
     .card2-minus.show,
     .card3-plus.show,
-    .card3-minus.show
+    .card3-minus.show,
+    .card4-minus.show,
+    .card4-minus.show
      {
         display: none;
       
@@ -38,24 +49,53 @@
             
         }
     }
-    .answer1,
-    .answer2,
-    .answer3{
+    
+    
+    .answer1 ,
+    .answer2 ,
+    .answer3 ,
+    .answer4 {
         display: none;
     }
-    
-    .answer1,
-    .answer2,
-    .answer3{
+    .answer1 ,
+    .answer2 ,
+    .answer3 ,
+    .answer4 
+    {
         font-size: 1.4rem;
         text-align: left;
         margin-top: .5rem;
+      
         
     }
 
     .answer1.show,
     .answer2.show,
-    .answer3.show{
+    .answer3.show,
+    .answer4.show
+    {
         display: block;
+        margin-top: 1.6rem;
+        animation:scale-up-ver-top .5s ease ;
+      
+        
     }
+
+    @keyframes scale-up-ver-top {
+        0% {
+          -webkit-transform: scaleY(0.4);
+                  transform: scaleY(0.4);
+          -webkit-transform-origin: 100% 0%;
+                  transform-origin: 100% 0%;
+        }
+        100% {
+          -webkit-transform: scaleY(1);
+                  transform: scaleY(1);
+          -webkit-transform-origin: 100% 0%;
+                  transform-origin: 100% 0%;
+        }
+      }
+      
+
+  
 }

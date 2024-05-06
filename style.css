@@ -9,6 +9,10 @@
   font-size: 62.5%;
 }
 
+@font-face {
+  font-family: "Candide";
+  src: url("../fonts/Candide Narrow Normal.ttf") format("truetype");
+}
 header {
   width: 100%;
   padding: 2.4rem 0;
@@ -24,8 +28,25 @@ header {
   align-items: center;
   justify-content: space-between;
 }
+.header-content > .logo {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
 .header-content > .logo > a img {
-  width: 6.4rem;
+  width: 6rem;
+}
+.header-content > .logo > span {
+  visibility: hidden;
+}
+@media (min-width: 425px) {
+  .header-content > .logo > span {
+    visibility: visible;
+    font-family: "Candide", sans-serif;
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    border-bottom: 4px solid #0C346B;
+  }
 }
 .header-content i {
   color: #1e293b;
@@ -49,19 +70,24 @@ header {
   display: none;
 }
 .header-content .mobile-nav.is-active {
-  width: 70%;
+  width: 60%;
   height: 60vh;
   position: fixed;
   top: 13px;
   right: 0;
   z-index: 99;
-  background-color: #64748b;
+  background-color: #0C346B;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
   text-transform: uppercase;
   transition: 5s;
+}
+@media (min-width: 768px) {
+  .header-content .mobile-nav.is-active {
+    display: none;
+  }
 }
 .header-content .mobile-nav.is-active > a {
   text-decoration: none;
@@ -85,7 +111,7 @@ header {
 @media (min-width: 768px) {
   .header-content .desktop-nav {
     display: flex;
-    gap: 1.6rem;
+    gap: 2rem;
   }
   .header-content .desktop-nav > a {
     text-decoration: none;
@@ -109,8 +135,12 @@ header {
   font-family: "Candide";
   src: url("../fonts/Candide Narrow Normal.ttf") format("truetype");
 }
+@font-face {
+  font-family: "Alegrya";
+  src: url("../fonts/Alegrya.otf") format("opentype");
+}
 .container {
-  max-width: 1100px;
+  max-width: 1220px;
   margin: 0 auto;
   padding: 0 1.2rem;
 }
@@ -123,14 +153,22 @@ header {
   transition: all 0.2s ease-in;
   position: relative;
   overflow: hidden;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   cursor: pointer;
   color: black;
   z-index: 1;
+  margin-top: 3.2rem;
 }
 @media (min-width: 768px) {
   .btn-contact {
     font-size: 2rem;
+    position: absolute;
+    margin-top: -50px;
+  }
+}
+@media (min-width: 1024px) {
+  .btn-contact {
+    margin-top: -140px;
   }
 }
 
@@ -211,17 +249,28 @@ main .hero .hero-content > h1 {
   font-size: 4rem;
   color: black;
   text-transform: uppercase;
-  margin: 6.4rem 0 1.6rem;
+  margin: 8.4rem 0 4rem;
   padding-bottom: 1.2rem;
-  border-bottom: 6px solid #1E4F87;
+  border-bottom: 6px solid #0C346B;
 }
 @media (min-width: 768px) {
   main .hero .hero-content > h1 {
     font-size: 6.4rem;
   }
 }
+@media (min-width: 1024px) {
+  main .hero .hero-content > h1 {
+    font-size: 7.4rem;
+  }
+}
+@media (min-width: 1400px) {
+  main .hero .hero-content > h1 {
+    font-size: 8.4rem;
+  }
+}
 main .hero .hero-content > h2 {
-  font: 2.2rem;
+  font-family: "Alegrya", sans-serif;
+  font-size: 2.2rem;
   text-align: center;
   color: black;
   margin-bottom: 3.2rem;
@@ -229,6 +278,11 @@ main .hero .hero-content > h2 {
 @media (min-width: 768px) {
   main .hero .hero-content > h2 {
     font-size: 3.2rem;
+  }
+}
+@media (min-width: 1024px) {
+  main .hero .hero-content > h2 {
+    font-size: 4.2rem;
   }
 }
 main .hero .hero-content > p {
@@ -245,11 +299,23 @@ main .hero .hero-content > p {
     width: 400px;
   }
 }
+@media (min-width: 1024px) {
+  main .hero .hero-content > p {
+    font-size: 2rem;
+    width: 400px;
+  }
+}
+@media (min-width: 1400px) {
+  main .hero .hero-content > p {
+    font-size: 2rem;
+    width: 500px;
+  }
+}
 main .about {
   background-color: #f1f5f9;
 }
 main .about .about-content.container {
-  padding: 6.4rem 1.2rem 3.2rem;
+  padding: 6.4rem 1.2rem;
 }
 main .about .about-content.container > h1 {
   text-transform: uppercase;
@@ -272,7 +338,7 @@ main .about .about-content.container > p {
 }
 @media (min-width: 768px) {
   main .about .about-content.container > p {
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
 }
 main .about .about-content.container p + p {
@@ -284,6 +350,55 @@ main .about .about-content.container .btn-about {
   cursor: pointer;
   transition: 0.3s ease-in-out;
   margin-top: 3.2rem;
+}
+main .services {
+  padding-bottom: 6.4rem;
+}
+main .services .services-content {
+  padding: 6.4rem 1.2rem;
+}
+main .services .services-content > h1 {
+  text-transform: uppercase;
+  font-size: 2.4rem;
+  display: inline-block;
+  padding-bottom: 0.6rem;
+  margin-bottom: 3.2rem;
+  border-bottom: 2px solid #ef4444;
+}
+@media (min-width: 768px) {
+  main .services .services-content > h1 {
+    font-size: 3.2rem;
+  }
+}
+main .services .services-content .service-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+main .services .services-content .service-wrap > p {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  text-align: justify;
+  margin-bottom: 3.2rem;
+}
+@media (min-width: 768px) {
+  main .services .services-content .service-wrap > p {
+    font-size: 1.6rem;
+  }
+}
+@media (min-width: 768px) {
+  main .services .services-content .service-wrap {
+    flex-direction: row;
+    gap: 3rem;
+  }
+  main .services .services-content .service-wrap > p {
+    width: 700px;
+    text-align: left;
+  }
+}
+main .questions {
+  background-color: #f1f5f9;
+  padding-bottom: 6.4rem;
 }
 main .questions .questions-content.container {
   padding: 6.4rem 1.2rem;
@@ -314,56 +429,11 @@ main .questions .questions-content.container .questions-wrap > p {
 }
 @media (min-width: 768px) {
   main .questions .questions-content.container .questions-wrap > p {
-    font-size: 2rem;
-  }
-}
-main .services .services-content {
-  padding: 6.4rem 1.2rem;
-}
-main .services .services-content > h1 {
-  text-transform: uppercase;
-  font-size: 2.4rem;
-  display: inline-block;
-  padding-bottom: 0.6rem;
-  margin-bottom: 3.2rem;
-  border-bottom: 2px solid #ef4444;
-}
-@media (min-width: 768px) {
-  main .services .services-content > h1 {
-    font-size: 3.2rem;
-  }
-}
-main .services .services-content .service-wrap {
-  display: flex;
-  flex-direction: column;
-  gap: 2.4rem;
-}
-main .services .services-content .service-wrap > p {
-  font-size: 1.4rem;
-  line-height: 1.6;
-  text-align: justify;
-  margin-bottom: 3.2rem;
-}
-@media (min-width: 768px) {
-  main .services .services-content .service-wrap > p {
     font-size: 1.6rem;
   }
 }
-@media (min-width: 1024px) {
-  main .services .services-content .service-wrap > p {
-    font-size: 2rem;
-  }
-}
-@media (min-width: 768px) {
-  main .services .services-content .service-wrap {
-    flex-direction: row;
-  }
-  main .services .services-content .service-wrap > p {
-    width: 700px;
-  }
-}
 main .contact {
-  background-color: #f1f5f9;
+  background-color: #e2e8f0;
   padding: 6.4rem 0;
 }
 main .contact .contact-content > h1 {
@@ -455,6 +525,10 @@ footer {
   transform: scale(1.1);
 }
 
+@font-face {
+  font-family: "Alegrya";
+  src: url("../fonts/Alegrya.otf") format("opentype");
+}
 .slider {
   margin: 0 auto;
   width: 100%;
@@ -483,7 +557,7 @@ footer {
   justify-content: center;
   padding: 1.2rem;
   position: relative;
-  background-color: #1E4F87;
+  background-color: #0C346B;
   z-index: -1;
 }
 
@@ -545,28 +619,23 @@ footer {
   text-align: center;
 }
 .service-description > h1 {
+  font-family: "Alegrya", sans-serif;
   margin-bottom: 1.6rem;
   padding-bottom: 0.8rem;
   border-bottom: 4px solid #ef4444;
 }
 @media (min-width: 768px) {
   .service-description > h1 {
-    font-size: 3rem;
+    font-size: 3.2rem;
   }
 }
 .service-description > p {
   font-size: 1.4rem;
-  font-weight: 500;
   line-height: 1.4;
 }
 @media (min-width: 768px) {
   .service-description > p {
-    font-size: 1.6rem;
-  }
-}
-@media (min-width: 1024px) {
-  .service-description > p {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 }
 
@@ -580,12 +649,6 @@ footer {
 @media (min-width: 728px) {
   .manual-navigation {
     width: 50%;
-    right: 0;
-  }
-}
-@media (min-width: 1400px) {
-  .manual-navigation {
-    width: 60%;
     right: 0;
   }
 }
@@ -618,7 +681,7 @@ footer {
 }
 
 .navigation-auto div {
-  border: 2px solid #1E4F87;
+  border: 2px solid #0C346B;
   padding: 5px;
   border-radius: 10px;
   cursor: pointer;
@@ -638,12 +701,6 @@ footer {
     right: 0;
   }
 }
-@media (min-width: 1400px) {
-  .navigation-auto {
-    width: 60%;
-    right: 0;
-  }
-}
 
 .navigation-auto div:not(:last-child) {
   margin-right: 40px;
@@ -657,20 +714,29 @@ footer {
 }
 
 .question-card {
-  background-color: #f1f5f9;
+  background-color: #e2e8f0;
+  max-width: 600px;
   border-radius: 5px;
   padding: 1rem;
+  box-shadow: 16px 22px 18px -20px rgba(0, 0, 0, 0.331);
 }
 .question-card > .question {
   display: flex;
+  justify-content: space-between;
   gap: 1rem;
+}
+.question-card > .question > p {
+  font-size: 1.6rem;
+  font-weight: bold;
 }
 .question-card .fa-plus.show,
 .question-card .fa-minus.show,
 .question-card .card2-plus.show,
 .question-card .card2-minus.show,
 .question-card .card3-plus.show,
-.question-card .card3-minus.show {
+.question-card .card3-minus.show,
+.question-card .card4-minus.show,
+.question-card .card4-minus.show {
   display: none;
 }
 .question-card button {
@@ -681,24 +747,39 @@ footer {
 }
 .question-card button > i {
   font-size: 1.2rem;
-  color: #1E4F87;
+  color: #0C346B;
 }
 .question-card .answer1,
 .question-card .answer2,
-.question-card .answer3 {
+.question-card .answer3,
+.question-card .answer4 {
   display: none;
 }
 .question-card .answer1,
 .question-card .answer2,
-.question-card .answer3 {
+.question-card .answer3,
+.question-card .answer4 {
   font-size: 1.4rem;
   text-align: left;
   margin-top: 0.5rem;
 }
 .question-card .answer1.show,
 .question-card .answer2.show,
-.question-card .answer3.show {
+.question-card .answer3.show,
+.question-card .answer4.show {
   display: block;
+  margin-top: 1.6rem;
+  animation: scale-up-ver-top 0.5s ease;
+}
+@keyframes scale-up-ver-top {
+  0% {
+    transform: scaleY(0.4);
+    transform-origin: 100% 0%;
+  }
+  100% {
+    transform: scaleY(1);
+    transform-origin: 100% 0%;
+  }
 }
 
 body {
