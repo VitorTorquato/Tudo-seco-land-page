@@ -156,21 +156,18 @@
 
  .manual-navigation{
     position: absolute;
-    width: 90%;
+    width: 95%;
 
     margin-top: -40px;
     display: flex;
     justify-content: center;
 
+  
     @media (min-width:728px){
-        width: 50%;
+        width: 100%;
         right: 0;
+        
     }
-    @media (min-width:1040px){
-        width: 40%;
-        right: 0;
-    }
-    
   
 
     
@@ -221,23 +218,19 @@
 .navigation-auto{
     position: absolute;
     
-    width: 90%;
+    width: 95%;
    
     margin-top: 360px;
     display: flex;
     justify-content: center;
 
     @media (min-width:728px){
-        width: 50%;
+        width: 100%;
         right: 0;
         
     }
 
-    @media (min-width:1040px){
-        width: 40%;
-        right: 0;
-    }
-    
+   
 
     
 

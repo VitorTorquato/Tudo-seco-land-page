@@ -27,7 +27,11 @@ header{
         gap: 1.6rem;
 
         >a img{
-           width: 6rem;
+           width: 4rem;
+
+           @media (min-width: 768px){
+                width: 6rem;
+           }
         }
 
         >span{
